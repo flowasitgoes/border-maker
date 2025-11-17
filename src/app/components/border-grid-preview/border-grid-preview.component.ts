@@ -51,7 +51,8 @@ export class BorderGridPreviewComponent {
       backgroundPosition: 'center'
     };
 
-    if (isBorder && !shouldShowImage) {
+    // 填充色应该应用到不显示图片的区域（无论是边框还是中心）
+    if (!shouldShowImage) {
       style['backgroundColor'] = this.settings.fillingColor || '#f9a8d4';
     }
 
