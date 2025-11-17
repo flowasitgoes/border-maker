@@ -7,6 +7,12 @@ ion-content {
   --background-activated: #b85c5c;
   --background-hover: #d88585;
   margin-right: 14px;
+  font-size: 14px;
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+  height: 36px;
 
   &::part(native) {
     background: #d07171 !important;

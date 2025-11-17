@@ -6,6 +6,7 @@ export interface BorderSettings {
   gridCountX: number;
   gridCountY: number;
   gridSize: number;
+  isReversed?: boolean;
 }
 
 @Injectable({
@@ -19,7 +20,8 @@ export class BorderService {
     borderWidth: 40,
     gridCountX: 8,
     gridCountY: 5,
-    gridSize: 60
+    gridSize: 60,
+    isReversed: false
   });
   public settings$: Observable<BorderSettings> = this.settingsSubject.asObservable();
 

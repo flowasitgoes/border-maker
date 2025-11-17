@@ -11,7 +11,10 @@
           (dragleave)="onDragLeave()"
           (drop)="onDrop($event)"
           (click)="openFileInput()">
-          <p class="upload-text">拖放圖片到此或點擊上傳</p>
+          <div class="upload-text-container">
+            <ion-icon name="images-outline" class="upload-icon"></ion-icon>
+            <p class="upload-text">拖放圖片到此或點擊上傳</p>
+          </div>
           <input
             #fileInput
             type="file"
@@ -69,6 +72,16 @@
                 (input)="updateSetting('gridSize', +$any($event.target).value)"
                 class="range-input" />
             </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="button-group">
+            <ion-button
+              (click)="toggleReverse()"
+              [color]="settings.isReversed ? 'primary' : 'medium'"
+              fill="outline">
+              <ion-icon name="swap-horizontal-outline" slot="start"></ion-icon>反轉 Reverse
+            </ion-button>
           </div>
         </div>
       </ng-template>

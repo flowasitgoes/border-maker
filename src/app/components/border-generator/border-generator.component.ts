@@ -15,7 +15,8 @@ export class BorderGeneratorComponent implements OnInit, OnDestroy {
     borderWidth: 40,
     gridCountX: 8,
     gridCountY: 5,
-    gridSize: 60
+    gridSize: 60,
+    isReversed: false
   };
 
   constructor(private borderService: BorderService) {}
@@ -102,6 +103,11 @@ export class BorderGeneratorComponent implements OnInit, OnDestroy {
 
   updateSetting(key: keyof BorderSettings, value: number): void {
     this.borderService.updateSettings({ [key]: value });
+  }
+
+  toggleReverse(): void {
+    const newReversedState = !this.settings.isReversed;
+    this.borderService.updateSettings({ isReversed: newReversedState });
   }
 }
 
