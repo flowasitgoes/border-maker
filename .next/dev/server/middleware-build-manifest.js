@@ -1,6 +1,31 @@
 globalThis.__BUILD_MANIFEST = {
   "pages": {
-    "/_app": []
+    "/_app": [
+      "static/chunks/5b693_next_dist_compiled_74714a42._.js",
+      "static/chunks/5b693_next_dist_shared_lib_e5d832b6._.js",
+      "static/chunks/5b693_next_dist_client_724a1ef7._.js",
+      "static/chunks/5b693_next_dist_92091afa._.js",
+      "static/chunks/5b693_next_app_11062586.js",
+      "static/chunks/[next]_entry_page-loader_ts_ea81cbec._.js",
+      "static/chunks/52a83_react-dom_539247c3._.js",
+      "static/chunks/0d312__pnpm_4b8504aa._.js",
+      "static/chunks/[root-of-the-server]__4b2a4180._.js",
+      "static/chunks/border-maker_pages__app_2da965e7._.js",
+      "static/chunks/turbopack-border-maker_pages__app_c9a20fcb._.js"
+    ],
+    "/_error": [
+      "static/chunks/5b693_next_dist_compiled_74714a42._.js",
+      "static/chunks/5b693_next_dist_shared_lib_89a75692._.js",
+      "static/chunks/5b693_next_dist_client_724a1ef7._.js",
+      "static/chunks/5b693_next_dist_199110f0._.js",
+      "static/chunks/5b693_next_error_45be1cff.js",
+      "static/chunks/[next]_entry_page-loader_ts_5fb5bd00._.js",
+      "static/chunks/52a83_react-dom_539247c3._.js",
+      "static/chunks/0d312__pnpm_4b8504aa._.js",
+      "static/chunks/[root-of-the-server]__30dc2224._.js",
+      "static/chunks/border-maker_pages__error_2da965e7._.js",
+      "static/chunks/turbopack-border-maker_pages__error_45fe8213._.js"
+    ]
   },
   "devFiles": [],
   "polyfillFiles": [

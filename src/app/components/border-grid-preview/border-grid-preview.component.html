@@ -1,0 +1,10 @@
+<div class="grid-container" [ngStyle]="getGridStyle()">
+  <div
+    *ngFor="let cell of gridCells; let i = index"
+    class="grid-cell"
+    [class.border-cell]="isBorderCell(i)"
+    [class.center-cell]="!isBorderCell(i)"
+    [ngStyle]="getCellStyle(i)">
+  </div>
+</div>
+

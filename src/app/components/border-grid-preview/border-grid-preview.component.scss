@@ -1,0 +1,22 @@
+.grid-container {
+  position: relative;
+  background: white;
+}
+
+.grid-cell {
+  border: 2px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.border-cell {
+  background-color: #f9a8d4;
+  border-color: #ea580c;
+}
+
+.center-cell {
+  background-color: #93c5fd;
+  border-color: #facc15;
+}
+

@@ -1,0 +1,8 @@
+{
+  "name": "border-maker",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
+

@@ -1,0 +1,18 @@
+/*
+ * App Global Styles
+ */
+
+@import './theme/variables.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--ion-font-family);
+  background-color: var(--ion-background-color);
+  color: var(--ion-text-color);
+}
+

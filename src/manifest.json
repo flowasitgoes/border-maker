@@ -1,0 +1,18 @@
+{
+  "name": "Border Maker",
+  "short_name": "Border Maker",
+  "description": "Border Generator App",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1e293b",
+  "theme_color": "#f97316",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
+

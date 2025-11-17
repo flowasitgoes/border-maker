@@ -1,0 +1,107 @@
+import { Component, OnInit, OnDestroy, ViewChild, ElementRef } from '@angular/core';
+import { BorderService, BorderSettings } from '../../services/border.service';
+
+@Component({
+  selector: 'app-border-generator',
+  templateUrl: './border-generator.component.html',
+  styleUrls: ['./border-generator.component.scss']
+})
+export class BorderGeneratorComponent implements OnInit, OnDestroy {
+  @ViewChild('fileInput', { static: false }) fileInput!: ElementRef<HTMLInputElement>;
+
+  uploadedImage: string | null = null;
+  isDragging = false;
+  settings: BorderSettings = {
+    borderWidth: 40,
+    gridCountX: 8,
+    gridCountY: 5,
+    gridSize: 60
+  };
+
+  constructor(private borderService: BorderService) {}
+
+  private subscriptions: any[] = [];
+
+  ngOnInit(): void {
+    // 訂閱圖片上傳狀態
+    const imageSub = this.borderService.uploadedImage$.subscribe(image => {
+      this.uploadedImage = image;
+    });
+    this.subscriptions.push(imageSub);
+
+    // 訂閱設置變更
+    const settingsSub = this.borderService.settings$.subscribe(settings => {
+      this.settings = settings;
+    });
+    this.subscriptions.push(settingsSub);
+  }
+
+  ngOnDestroy(): void {
+    // 清理訂閱
+    this.subscriptions.forEach(sub => sub.unsubscribe());
+  }
+
+  onDragOver(event: DragEvent): void {
+    event.preventDefault();
+    this.isDragging = true;
+  }
+
+  onDragLeave(): void {
+    this.isDragging = false;
+  }
+
+  onDrop(event: DragEvent): void {
+    event.preventDefault();
+    this.isDragging = false;
+    const file = event.dataTransfer?.files?.[0];
+    if (file) {
+      this.handleImageUpload(file);
+    }
+  }
+
+  onFileInputChange(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    const file = input.files?.[0];
+    if (file) {
+      this.handleImageUpload(file);
+    }
+  }
+
+  handleImageUpload(file: File): void {
+    // 驗證文件類型
+    if (!file.type.startsWith('image/')) {
+      console.error('請選擇圖片文件');
+      return;
+    }
+
+    // 限制文件大小（例如 10MB）
+    const maxSize = 10 * 1024 * 1024; // 10MB
+    if (file.size > maxSize) {
+      console.error('圖片文件太大，請選擇小於 10MB 的圖片');
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const result = e.target?.result as string;
+      this.borderService.setUploadedImage(result);
+    };
+    reader.onerror = () => {
+      console.error('讀取圖片文件時發生錯誤');
+    };
+    reader.readAsDataURL(file);
+  }
+
+  openFileInput(): void {
+    this.fileInput.nativeElement.click();
+  }
+
+  resetUpload(): void {
+    this.borderService.setUploadedImage(null);
+  }
+
+  updateSetting(key: keyof BorderSettings, value: number): void {
+    this.borderService.updateSettings({ [key]: value });
+  }
+}
+

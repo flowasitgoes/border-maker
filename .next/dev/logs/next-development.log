@@ -3,3 +3,2183 @@
 [00:01:34.609] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
 [00:01:34.609] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
 [00:01:34.609] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3636/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3636/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763371897074}
+[00:11:26.658] Server  ERROR    ⨯ ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:11:26.662] Server  ERROR    ⨯ ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:11:26.663] Server  ERROR    ⨯ ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:11:26.664] Server  ERROR    ⨯ ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:11:26.666] Server  ERROR    ⨯ ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:11:26.666] Server  ERROR    ⨯ ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:11:26.666] Server  ERROR    ⨯ ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:11:26.668] Server  ERROR    ⨯ ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:11:26.669] Server  ERROR    ⨯ ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:11:26.669] Server  ERROR    ⨯ ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:11:26.669] Server  ERROR    ⨯ ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:11:26.670] Server  ERROR    ⨯ ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:11:26.670] Server  ERROR    ⨯ ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:11:26.670] Server  ERROR    ⨯ ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:11:26.671] Server  ERROR    ⨯ ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:11:26.671] Server  ERROR    ⨯ ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:11:26.671] Server  ERROR    ⨯ ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:11:26.672] Server  ERROR    ⨯ ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:11:26.672] Server  ERROR    ⨯ ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:11:26.672] Server  ERROR    ⨯ ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:11:26.672] Server  ERROR    ⨯ ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:11:26.673] Server  ERROR    ⨯ ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:11:26.673] Server  ERROR    ⨯ ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:11:26.673] Server  ERROR    ⨯ ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:11:26.673] Server  ERROR    ⨯ ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:11:26.673] Server  ERROR    ⨯ ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:11:26.674] Server  ERROR    ⨯ ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:11:26.674] Server  ERROR    ⨯ ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:11:26.685] Server  LOG      ✓ Compiled in 116ms
+[00:11:26.993] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:11:31.991] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:11:31.991] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:11:32.993] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:11:32.993] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:11:33.992] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:11:33.993] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:11:35.992] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:11:35.992] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:11:39.993] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:11:43.991] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:11:46.183] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:12:05.664] Server  ERROR    ⨯ ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:12:05.775] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:12:06.219] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:12:06.605] Browser ERROR   uncaughtError: Error: ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:12:06.811] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:12:06.811] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:13:04.992] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:13:08.993] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:13:09.991] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:13:22.993] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:13:22.993] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:13:42.993] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:13:43.993] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:13:57.996] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:14:19.991] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:15:35.991] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:15:39.992] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:15:40.993] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:15:54.999] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:15:55.000] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:16:11.993] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:16:23.992] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:16:27.992] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:16:30.994] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:16:35.993] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:16:44.995] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:17:04.992] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:17:04.992] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:17:06.993] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:17:06.993] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:17:15.994] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:17:15.994] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:17:18.993] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:17:19.992] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:17:20.992] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:17:30.993] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:17:53.089] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:17:53.108] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:17:59.801] Server  ERROR    ⨯ ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:17:59.805] Server  ERROR    ⨯ ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:17:59.805] Server  ERROR    ⨯ ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:17:59.806] Server  ERROR    ⨯ ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:17:59.814] Server  ERROR    ⨯ ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:17:59.820] Server  ERROR    ⨯ ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:18:00.117] Browser ERROR   uncaughtError: Error: ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:18:01.001] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:18:01.002] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:18:24.993] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:19:48.993] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:19:53.027] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:19:53.996] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:19:55.993] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:20:17.991] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:20:17.991] Browser ERROR   ./border-maker/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/border-generator'
+  3 | import { useState, useRef } from 'react'
+  4 | import { Upload } from 'lucide-react'
+> 5 | import BorderGenerator from '@/components/border-generator'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import map: aliased to relative './src/components/border-generator' inside of [project]/border-maker
+
+Import traces:
+  Client Component Browser:
+    ./border-maker/app/page.tsx [Client Component Browser]
+    ./border-maker/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./border-maker/app/page.tsx [Client Component SSR]
+    ./border-maker/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
