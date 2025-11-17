@@ -3,6 +3,15 @@
     <ion-title>
       Border Generator
     </ion-title>
+    <ion-button
+      *ngIf="uploadedImage"
+      slot="end"
+      color="warning"
+      size="small"
+      class="reset-upload-button"
+      (click)="resetUpload()">
+      重新上傳
+    </ion-button>
   </ion-toolbar>
 </ion-header>
 

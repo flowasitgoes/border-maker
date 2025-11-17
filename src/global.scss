@@ -16,3 +16,11 @@ body {
   color: var(--ion-text-color);
 }
 
+ion-toolbar {
+  --background: #4a406a;
+}
+
+.toolbar-container {
+  background: #4a406a !important;
+}
+

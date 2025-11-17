@@ -2,3 +2,18 @@ ion-content {
   --background: #0f172a;
 }
 
+.reset-upload-button {
+  --background: #d07171;
+  --background-activated: #b85c5c;
+  --background-hover: #d88585;
+  margin-right: 14px;
+
+  &::part(native) {
+    background: #d07171 !important;
+  }
+
+  .button-native {
+    background: #d07171 !important;
+  }
+}
+
