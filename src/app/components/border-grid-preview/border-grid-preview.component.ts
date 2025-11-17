@@ -38,10 +38,9 @@ export class BorderGridPreviewComponent {
   getCellStyle(index: number): { [key: string]: string } {
     const isBorder = this.isBorderCell(index);
     const isReversed = this.settings.isReversed || false;
-    // 如果反轉：邊框顯示圖片，中心不顯示；如果不反轉：中心顯示圖片，邊框不顯示
     const shouldShowImage = isReversed ? isBorder : !isBorder;
     
-    return {
+    const style: { [key: string]: string } = {
       width: `${this.settings.gridSize}px`,
       height: `${this.settings.gridSize}px`,
       display: 'flex',
@@ -51,6 +50,11 @@ export class BorderGridPreviewComponent {
       backgroundSize: 'cover',
       backgroundPosition: 'center'
     };
+
+    if (isBorder && !shouldShowImage) {
+      style['backgroundColor'] = this.settings.fillingColor || '#f9a8d4';
+    }
+
+    return style;
   }
 }
-

@@ -82,6 +82,12 @@
               fill="outline">
               <ion-icon name="swap-horizontal-outline" slot="start"></ion-icon>反轉 Reverse
             </ion-button>
+            <ion-button
+              (click)="openColorPicker()"
+              color="primary"
+              fill="outline">
+              <ion-icon name="color-palette-outline" slot="start"></ion-icon>填滿 Fillings
+            </ion-button>
           </div>
         </div>
       </ng-template>
@@ -104,5 +110,13 @@
       </app-border-grid-preview>
     </div>
   </div>
+
+  <!-- Color Picker -->
+  <app-color-picker
+    *ngIf="showColorPicker"
+    [initialColor]="settings.fillingColor || '#f9a8d4'"
+    (colorChange)="onColorChange($event)"
+    (close)="closeColorPicker()">
+  </app-color-picker>
 </div>
 

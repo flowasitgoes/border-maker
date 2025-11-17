@@ -16,21 +16,22 @@ export class BorderGeneratorComponent implements OnInit, OnDestroy {
     gridCountX: 8,
     gridCountY: 5,
     gridSize: 60,
-    isReversed: false
+    isReversed: false,
+    fillingColor: '#f9a8d4'
   };
+
+  showColorPicker = false;
 
   constructor(private borderService: BorderService) {}
 
   private subscriptions: any[] = [];
 
   ngOnInit(): void {
-    // 訂閱圖片上傳狀態
     const imageSub = this.borderService.uploadedImage$.subscribe(image => {
       this.uploadedImage = image;
     });
     this.subscriptions.push(imageSub);
 
-    // 訂閱設置變更
     const settingsSub = this.borderService.settings$.subscribe(settings => {
       this.settings = settings;
     });
@@ -38,7 +39,6 @@ export class BorderGeneratorComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    // 清理訂閱
     this.subscriptions.forEach(sub => sub.unsubscribe());
   }
 
@@ -69,14 +69,12 @@ export class BorderGeneratorComponent implements OnInit, OnDestroy {
   }
 
   handleImageUpload(file: File): void {
-    // 驗證文件類型
     if (!file.type.startsWith('image/')) {
       console.error('請選擇圖片文件');
       return;
     }
 
-    // 限制文件大小（例如 10MB）
-    const maxSize = 10 * 1024 * 1024; // 10MB
+    const maxSize = 10 * 1024 * 1024;
     if (file.size > maxSize) {
       console.error('圖片文件太大，請選擇小於 10MB 的圖片');
       return;
@@ -109,5 +107,16 @@ export class BorderGeneratorComponent implements OnInit, OnDestroy {
     const newReversedState = !this.settings.isReversed;
     this.borderService.updateSettings({ isReversed: newReversedState });
   }
-}
 
+  openColorPicker(): void {
+    this.showColorPicker = true;
+  }
+
+  closeColorPicker(): void {
+    this.showColorPicker = false;
+  }
+
+  onColorChange(color: string): void {
+    this.borderService.updateSettings({ fillingColor: color });
+  }
+}

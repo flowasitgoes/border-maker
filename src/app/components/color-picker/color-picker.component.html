@@ -1,0 +1,59 @@
+<div class="color-picker-overlay" (click)="onClose()">
+  <div class="color-picker-panel" (click)="$event.stopPropagation()">
+    <div class="picker-main-container">
+      <!-- 左侧：颜色选择区域 -->
+      <div class="color-picker-left">
+        <div class="color-display-section">
+          <div class="color-indicator-row">
+            <div class="color-indicator" [style.background-color]="currentColor"></div>
+            <div class="hex-input-section">
+              <input
+                type="text"
+                class="hex-input"
+                [(ngModel)]="hexValue"
+                (blur)="onHexChange()"
+                placeholder="#ff0000" />
+              <div class="hex-label">HEX</div>
+            </div>
+          </div>
+          <div class="spectrum-container">
+            <div class="spectrum-map">
+              <div #spectrumCursor class="color-cursor spectrum-cursor"></div>
+              <canvas
+                #spectrumCanvas
+                width="180"
+                height="180"
+                (mousedown)="onSpectrumMouseDown($event)"></canvas>
+            </div>
+            <div class="hue-map">
+              <div #hueCursor class="color-cursor hue-cursor"></div>
+              <canvas
+                #hueCanvas
+                width="20"
+                height="180"
+                (mousedown)="onHueMouseDown($event)"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 右侧：背景选择区域 -->
+      <div class="color-picker-right">
+        <div class="picker-section">
+          <h3 class="section-title">背景</h3>
+          <div class="swatches-grid">
+            <button
+              *ngFor="let bg of backgroundOptions"
+              class="swatch"
+              [class.active]="selectedBackground === bg.value"
+              [style.background-color]="bg.color"
+              (click)="onBackgroundSelect(bg.value)"
+              [title]="bg.label">
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
