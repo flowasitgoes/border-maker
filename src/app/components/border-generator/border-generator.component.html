@@ -25,21 +25,6 @@
         <!-- Settings Panel -->
         <div class="settings-content">
           <div class="settings-grid">
-            <!-- Border Width -->
-            <div class="setting-item">
-              <label class="setting-label">
-                邊框寬度: {{ settings.borderWidth }}px
-              </label>
-              <input
-                type="range"
-                min="10"
-                max="80"
-                step="5"
-                [value]="settings.borderWidth"
-                (input)="updateSetting('borderWidth', +$any($event.target).value)"
-                class="range-input" />
-            </div>
-
             <!-- Grid Count X -->
             <div class="setting-item">
               <label class="setting-label">

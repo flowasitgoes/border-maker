@@ -97,22 +97,6 @@ export default function BorderGenerator() {
             // Settings Panel
             <div className="space-y-4">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {/* Border Width */}
-                <div>
-                  <label className="block text-xs font-bold text-slate-800 mb-1">
-                    邊框寬度: {settings.borderWidth}px
-                  </label>
-                  <input
-                    type="range"
-                    min="10"
-                    max="80"
-                    step="5"
-                    value={settings.borderWidth}
-                    onChange={(e) => updateSetting('borderWidth', Number(e.target.value))}
-                    className="w-full h-1.5 bg-slate-300 rounded-lg appearance-none cursor-pointer accent-orange-600"
-                  />
-                </div>
-
                 {/* Grid Count X */}
                 <div>
                   <label className="block text-xs font-bold text-slate-800 mb-1">
