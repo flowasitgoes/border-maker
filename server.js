@@ -25,11 +25,12 @@ const storage = multer.diskStorage({
     cb(null, uploadsDir);
   },
   filename: (req, file, cb) => {
-    // 生成唯一文件名：時間戳 + 原始文件名
-    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
-    const ext = path.extname(file.originalname);
-    const name = path.basename(file.originalname, ext);
-    cb(null, `${name}-${uniqueSuffix}${ext}`);
+    // 生成唯一文件名：只使用時間戳，避免中文檔名問題
+    const timestamp = Date.now();
+    const randomSuffix = Math.round(Math.random() * 1E9);
+    const ext = path.extname(file.originalname).toLowerCase() || '.jpg'; // 確保有擴展名
+    // 統一使用時間戳作為文件名，格式：timestamp-randomSuffix.ext
+    cb(null, `${timestamp}-${randomSuffix}${ext}`);
   }
 });
 
