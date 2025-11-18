@@ -89,6 +89,12 @@
               fill="outline">
               <ion-icon name="color-palette-outline" slot="start"></ion-icon>填滿 Fillings
             </ion-button>
+            <ion-button
+              (click)="exportGridAsImage()"
+              color="success"
+              fill="outline">
+              <ion-icon name="download-outline" slot="start"></ion-icon>導出圖片 Export
+            </ion-button>
           </div>
         </div>
       </ng-template>
@@ -104,7 +110,7 @@
         class="preview-image" />
     </div>
 
-    <div class="grid-panel">
+    <div class="grid-panel" #gridPanel>
       <app-border-grid-preview
         [uploadedImage]="uploadedImage"
         [settings]="settings">
