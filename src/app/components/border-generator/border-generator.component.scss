@@ -293,3 +293,32 @@
   object-fit: cover;
 }
 
+.test-scroll-block {
+  background: #fbbf24;
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-top: 4px solid #f97316;
+  margin-bottom: 56px;
+}
+
+.test-scroll-content {
+  text-align: center;
+  padding: 16px;
+}
+
+.test-scroll-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 12px;
+}
+
+.test-scroll-content p {
+  font-size: 16px;
+  color: #1e293b;
+  margin: 0;
+}
+
