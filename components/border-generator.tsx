@@ -13,6 +13,7 @@ interface BorderSettings {
 
 export default function BorderGenerator() {
   const [uploadedImage, setUploadedImage] = useState<string | null>(null)
+  const [galleryImages, setGalleryImages] = useState<string[]>([])
   const [isDragging, setIsDragging] = useState(false)
   const fileInputRef = useRef<HTMLInputElement>(null)
 
@@ -44,7 +45,15 @@ export default function BorderGenerator() {
   const handleImageUpload = (file: File) => {
     const reader = new FileReader()
     reader.onload = (e) => {
-      setUploadedImage(e.target?.result as string)
+      const imageDataUrl = e.target?.result as string
+      setUploadedImage(imageDataUrl)
+      // 將新上傳的圖片添加到Gallery（避免重複）
+      setGalleryImages((prev) => {
+        if (!prev.includes(imageDataUrl)) {
+          return [imageDataUrl, ...prev]
+        }
+        return prev
+      })
     }
     reader.readAsDataURL(file)
   }
@@ -61,6 +70,10 @@ export default function BorderGenerator() {
       ...prev,
       [key]: value,
     }))
+  }
+
+  const handleGalleryImageClick = (imageDataUrl: string) => {
+    setUploadedImage(imageDataUrl)
   }
 
   return (
@@ -173,6 +186,34 @@ export default function BorderGenerator() {
 
           <div className="w-1/2 bg-pink-200 border-r-4 border-orange-500 flex items-center justify-center p-4 overflow-auto">
             <BorderGridPreview uploadedImage={uploadedImage} settings={settings} />
+          </div>
+        </div>
+      )}
+
+      {/* Gallery Section */}
+      {galleryImages.length > 0 && (
+        <div className="bg-slate-800 border-t-4 border-orange-500 p-4">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-lg font-bold text-white mb-3">Gallery</h2>
+            <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 gap-3">
+              {galleryImages.map((imageUrl, index) => (
+                <div
+                  key={index}
+                  onClick={() => handleGalleryImageClick(imageUrl)}
+                  className={`relative aspect-square rounded-lg overflow-hidden cursor-pointer transition-all border-2 ${
+                    uploadedImage === imageUrl
+                      ? 'border-orange-500 ring-2 ring-orange-300'
+                      : 'border-slate-600 hover:border-orange-400'
+                  }`}
+                >
+                  <img
+                    src={imageUrl}
+                    alt={`Gallery ${index + 1}`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       )}

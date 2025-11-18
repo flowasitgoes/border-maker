@@ -17,6 +17,9 @@ export class BorderService {
   private uploadedImageSubject = new BehaviorSubject<string | null>(null);
   public uploadedImage$: Observable<string | null> = this.uploadedImageSubject.asObservable();
 
+  private galleryImagesSubject = new BehaviorSubject<string[]>([]);
+  public galleryImages$: Observable<string[]> = this.galleryImagesSubject.asObservable();
+
   private settingsSubject = new BehaviorSubject<BorderSettings>({
     borderWidth: 40,
     gridCountX: 8,
@@ -29,10 +32,21 @@ export class BorderService {
 
   setUploadedImage(image: string | null): void {
     this.uploadedImageSubject.next(image);
+    // 將新上傳的圖片添加到Gallery（避免重複）
+    if (image) {
+      const currentGallery = this.galleryImagesSubject.value;
+      if (!currentGallery.includes(image)) {
+        this.galleryImagesSubject.next([image, ...currentGallery]);
+      }
+    }
   }
 
   getUploadedImage(): string | null {
     return this.uploadedImageSubject.value;
+  }
+
+  getGalleryImages(): string[] {
+    return this.galleryImagesSubject.value;
   }
 
   updateSettings(settings: Partial<BorderSettings>): void {

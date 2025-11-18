@@ -10,6 +10,7 @@ export class BorderGeneratorComponent implements OnInit, OnDestroy {
   @ViewChild('fileInput', { static: false }) fileInput!: ElementRef<HTMLInputElement>;
 
   uploadedImage: string | null = null;
+  galleryImages: string[] = [];
   isDragging = false;
   settings: BorderSettings = {
     borderWidth: 40,
@@ -31,6 +32,11 @@ export class BorderGeneratorComponent implements OnInit, OnDestroy {
       this.uploadedImage = image;
     });
     this.subscriptions.push(imageSub);
+
+    const gallerySub = this.borderService.galleryImages$.subscribe(images => {
+      this.galleryImages = images;
+    });
+    this.subscriptions.push(gallerySub);
 
     const settingsSub = this.borderService.settings$.subscribe(settings => {
       this.settings = settings;
@@ -118,5 +124,9 @@ export class BorderGeneratorComponent implements OnInit, OnDestroy {
 
   onColorChange(color: string): void {
     this.borderService.updateSettings({ fillingColor: color });
+  }
+
+  onGalleryImageClick(imageUrl: string): void {
+    this.borderService.setUploadedImage(imageUrl);
   }
 }

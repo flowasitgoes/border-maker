@@ -118,5 +118,24 @@
     (colorChange)="onColorChange($event)"
     (close)="closeColorPicker()">
   </app-color-picker>
+
+  <!-- Gallery Section -->
+  <div class="gallery-section" *ngIf="galleryImages.length > 0">
+    <div class="gallery-content">
+      <h2 class="gallery-title">Gallery</h2>
+      <div class="gallery-grid">
+        <div
+          *ngFor="let imageUrl of galleryImages; let i = index"
+          class="gallery-item"
+          [class.active]="uploadedImage === imageUrl"
+          (click)="onGalleryImageClick(imageUrl)">
+          <img
+            [src]="imageUrl"
+            [alt]="'Gallery ' + (i + 1)"
+            class="gallery-thumbnail" />
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
