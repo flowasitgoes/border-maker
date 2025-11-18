@@ -6,9 +6,6 @@
 /out-tsc
 /www
 
-# Only exists if Bazel was run
-/bazel-out
-
 # Node
 /node_modules
 npm-debug.log
@@ -44,11 +41,6 @@ testem.log
 .DS_Store
 Thumbs.db
 
-# Capacitor
-/android
-/ios
-.capacitor
-
-# Next.js (保留舊的 Next.js 構建文件)
-.next
-out
+# Uploaded files (可選：如果不想提交上傳的圖片到 git)
+/public/uploads/*
+!/public/uploads/.gitkeep

@@ -8,7 +8,7 @@
       slot="end"
       color="warning"
       class="reset-upload-button"
-      (click)="resetUpload()">
+      (click)="openFileInput()">
       重新上傳
     </ion-button>
   </ion-toolbar>
@@ -16,5 +16,11 @@
 
 <ion-content [fullscreen]="true">
   <app-border-generator></app-border-generator>
+  <input
+    #fileInput
+    type="file"
+    accept="image/*"
+    (change)="onFileInputChange($event)"
+    class="hidden-input" />
 </ion-content>
 

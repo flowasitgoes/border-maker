@@ -272,13 +272,36 @@
   position: relative;
   aspect-ratio: 1;
   border-radius: 8px;
-  overflow: hidden;
+  overflow: visible; // 改為 visible 以便顯示刪除按鈕
   cursor: pointer;
   transition: all 0.3s;
   border: 2px solid #475569;
+  max-width: 80px; // 限制最大宽度
+  max-height: 80px; // 限制最大高度
+  margin: 0 auto; // 居中显示
+
+  @media (min-width: 640px) {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 120px;
+    max-height: 120px;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 140px;
+    max-height: 140px;
+  }
 
   &:hover {
     border-color: #fb923c;
+    
+    .gallery-delete-btn {
+      opacity: 1;
+      visibility: visible;
+    }
   }
 
   &.active {
@@ -286,6 +309,59 @@
     box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.3);
   }
 }
+
+.gallery-item-content {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.gallery-delete-btn {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #ef4444;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  opacity: 0.8; // 移動設備上可見
+  visibility: visible; // 移動設備上可見
+  transition: all 0.2s;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  @media (min-width: 768px) {
+    opacity: 0; // 桌面端懸停時顯示
+    visibility: hidden;
+  }
+
+  &:hover {
+    background-color: #dc2626;
+    transform: scale(1.1);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:active {
+    transform: scale(0.95);
+    background-color: #b91c1c;
+  }
+
+  ion-icon {
+    font-size: 18px;
+    color: #ffffff;
+  }
+}
+
 
 .gallery-thumbnail {
   width: 100%;
