@@ -3,11 +3,7 @@
   "outputDirectory": "www",
   "rewrites": [
     {
-      "source": "/uploads/:path*",
-      "destination": "/api/uploads/:path*"
-    },
-    {
-      "source": "/((?!api|assets|.*\\.).*)",
+      "source": "/((?!api|assets|uploads|.*\\.).*)",
       "destination": "/index.html"
     }
   ],

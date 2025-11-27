@@ -7,7 +7,7 @@ export interface UploadResponse {
   success: boolean;
   filePath: string | null;
   filename: string;
-  imageDataUrl?: string; // base64 数据，用于 Vercel 环境
+  imageDataUrl?: string; // Vercel 环境返回 base64
   isVercel?: boolean; // 标识是否为 Vercel 环境
 }
 

@@ -131,19 +131,27 @@ export class BorderGeneratorComponent implements OnInit, OnDestroy, AfterViewIni
       next: (response) => {
         console.log('[BorderGenerator] 上傳成功，收到響應:', response);
         if (response.success) {
-          // 優先使用 base64 數據（Vercel 環境或本地環境都支持）
-          if (response.imageDataUrl) {
-            console.log('[BorderGenerator] 使用 base64 數據');
-            this.uploadedImage = response.imageDataUrl;
-            this.borderService.setUploadedImage(response.imageDataUrl);
-          } else if (response.filePath) {
-            // 如果沒有 base64，使用文件路徑
-            console.log('[BorderGenerator] 使用文件路徑:', response.filePath);
-            const imageUrl = this.uploadService.getImageUrl(response.filePath);
-            this.uploadedImage = imageUrl;
-            this.borderService.setUploadedImage(response.filePath);
+          // 優先使用 base64（Vercel 環境），否則使用文件路徑
+          const imageData = response.imageDataUrl || response.filePath;
+          console.log('[BorderGenerator] 圖片數據:', imageData ? '已設置' : '未設置');
+          console.log('[BorderGenerator] 是否 Vercel 環境:', response.isVercel);
+          
+          if (imageData) {
+            console.log('[BorderGenerator] 調用 borderService.setUploadedImage()');
+            this.borderService.setUploadedImage(imageData);
+            
+            // 如果是 base64，直接使用；否則使用服務器 URL
+            if (response.imageDataUrl) {
+              this.uploadedImage = response.imageDataUrl;
+            } else if (response.filePath) {
+              const imageUrl = this.uploadService.getImageUrl(response.filePath);
+              console.log('[BorderGenerator] 圖片 URL:', imageUrl);
+              this.uploadedImage = imageUrl;
+            }
+            console.log('[BorderGenerator] uploadedImage 已設置為:', this.uploadedImage ? '已設置' : '未設置');
+          } else {
+            console.warn('[BorderGenerator] 響應中沒有圖片數據');
           }
-          console.log('[BorderGenerator] uploadedImage 已設置為:', this.uploadedImage);
         } else {
           console.warn('[BorderGenerator] 響應中 success 為 false');
         }
@@ -207,20 +215,11 @@ export class BorderGeneratorComponent implements OnInit, OnDestroy, AfterViewIni
   }
 
   getImageUrl(imagePath: string): string {
-    // 如果是 base64 數據（data: 開頭），直接返回
-    if (imagePath.startsWith('data:')) {
-      return imagePath;
-    }
-    // 如果是完整 URL（http:// 或 https://），直接返回
-    if (imagePath.startsWith('http://') || imagePath.startsWith('https://')) {
-      return imagePath;
-    }
-    // 如果是 /uploads/ 路徑，轉換為完整 URL
+    // 如果是路徑，轉換為完整 URL；如果是 base64 或完整 URL，直接返回
     if (imagePath.startsWith('/uploads/') || imagePath.startsWith('uploads/')) {
       return this.uploadService.getImageUrl(imagePath);
     }
-    // 其他情況直接返回
-    return imagePath;
+    return imagePath; // base64 或完整 URL
   }
 
   onDeleteImage(event: Event, imagePath: string): void {

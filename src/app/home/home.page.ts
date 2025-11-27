@@ -68,14 +68,16 @@ export class HomePage implements OnInit, OnDestroy {
       next: (response) => {
         console.log('[HomePage] 上傳成功，收到響應:', response);
         if (response.success) {
-          // 優先使用 base64 數據（Vercel 環境或本地環境都支持）
-          if (response.imageDataUrl) {
-            console.log('[HomePage] 使用 base64 數據');
-            this.borderService.setUploadedImage(response.imageDataUrl);
-          } else if (response.filePath) {
-            // 如果沒有 base64，使用文件路徑
-            console.log('[HomePage] 使用文件路徑:', response.filePath);
-            this.borderService.setUploadedImage(response.filePath);
+          // 優先使用 base64（Vercel 環境），否則使用文件路徑
+          const imageData = response.imageDataUrl || response.filePath;
+          console.log('[HomePage] 圖片數據:', imageData ? '已設置' : '未設置');
+          console.log('[HomePage] 是否 Vercel 環境:', response.isVercel);
+          
+          if (imageData) {
+            console.log('[HomePage] 調用 borderService.setUploadedImage()');
+            this.borderService.setUploadedImage(imageData);
+          } else {
+            console.warn('[HomePage] 響應中沒有圖片數據');
           }
         }
         this.isUploading = false;
