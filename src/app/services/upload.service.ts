@@ -29,7 +29,8 @@ export interface DeleteResponse {
 })
 export class UploadService {
   private apiUrl = environment.apiUrl;
-  private serverUrl = 'http://localhost:3000';
+  // 使用相對路徑，在 Vercel 上會自動使用當前域名
+  private serverUrl = environment.production ? '' : 'http://localhost:3000';
 
   constructor(private http: HttpClient) {}
 
