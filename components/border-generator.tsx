@@ -15,6 +15,7 @@ export default function BorderGenerator() {
   const [uploadedImage, setUploadedImage] = useState<string | null>(null)
   const [galleryImages, setGalleryImages] = useState<string[]>([])
   const [isDragging, setIsDragging] = useState(false)
+  const [isUploading, setIsUploading] = useState(false)
   const fileInputRef = useRef<HTMLInputElement>(null)
 
   const [settings, setSettings] = useState<BorderSettings>({
@@ -42,20 +43,79 @@ export default function BorderGenerator() {
     }
   }
 
-  const handleImageUpload = (file: File) => {
-    const reader = new FileReader()
-    reader.onload = (e) => {
-      const imageDataUrl = e.target?.result as string
-      setUploadedImage(imageDataUrl)
-      // 將新上傳的圖片添加到Gallery（避免重複）
-      setGalleryImages((prev) => {
-        if (!prev.includes(imageDataUrl)) {
-          return [imageDataUrl, ...prev]
-        }
-        return prev
-      })
+  const handleImageUpload = async (file: File) => {
+    // 验证文件类型
+    if (!file.type.startsWith('image/')) {
+      console.error('错误: 不是图片文件')
+      return
     }
-    reader.readAsDataURL(file)
+
+    // 验证文件大小（10MB）
+    const maxSize = 10 * 1024 * 1024
+    if (file.size > maxSize) {
+      console.error('错误: 文件太大', file.size, 'bytes')
+      return
+    }
+
+    setIsUploading(true)
+
+    try {
+      // 调用 API 上传文件
+      const formData = new FormData()
+      formData.append('image', file)
+
+      const response = await fetch('/api/upload', {
+        method: 'POST',
+        body: formData,
+      })
+
+      if (!response.ok) {
+        const errorData = await response.json()
+        throw new Error(errorData.error || '上传失败')
+      }
+
+      const data = await response.json()
+
+      if (data.success) {
+        // 使用返回的 imageDataUrl（base64）用于前端渲染
+        const imageDataUrl = data.imageDataUrl || data.filePath
+        
+        if (imageDataUrl) {
+          setUploadedImage(imageDataUrl)
+          // 將新上傳的圖片添加到Gallery（避免重複）
+          setGalleryImages((prev) => {
+            if (!prev.includes(imageDataUrl)) {
+              return [imageDataUrl, ...prev]
+            }
+            return prev
+          })
+
+          // 如果是本地环境，文件已保存到 public/uploads/
+          if (data.filePath && !data.isVercel) {
+            console.log('文件已保存到本地:', data.filePath)
+          } else if (data.isVercel) {
+            console.log('Vercel 环境: 文件仅用于渲染，未保存到文件系统')
+          }
+        }
+      }
+    } catch (error) {
+      console.error('上传图片失败:', error)
+      // 如果上传失败，回退到 base64 方式（仅用于渲染，不保存）
+      const reader = new FileReader()
+      reader.onload = (e) => {
+        const imageDataUrl = e.target?.result as string
+        setUploadedImage(imageDataUrl)
+        setGalleryImages((prev) => {
+          if (!prev.includes(imageDataUrl)) {
+            return [imageDataUrl, ...prev]
+          }
+          return prev
+        })
+      }
+      reader.readAsDataURL(file)
+    } finally {
+      setIsUploading(false)
+    }
   }
 
   const handleFileInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -95,7 +155,7 @@ export default function BorderGenerator() {
             >
               <div>
                 <p className="text-sm font-semibold text-slate-800">
-                  拖放圖片到此或點擊上傳
+                  {isUploading ? '正在上傳中...' : '拖放圖片到此或點擊上傳'}
                 </p>
               </div>
               <input
