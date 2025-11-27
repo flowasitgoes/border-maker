@@ -5,8 +5,10 @@ import { environment } from '../../environments/environment';
 
 export interface UploadResponse {
   success: boolean;
-  filePath: string;
+  filePath: string | null;
   filename: string;
+  imageDataUrl?: string; // base64 数据，用于 Vercel 环境
+  isVercel?: boolean; // 标识是否为 Vercel 环境
 }
 
 export interface ImageListResponse {

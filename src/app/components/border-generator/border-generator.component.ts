@@ -131,18 +131,18 @@ export class BorderGeneratorComponent implements OnInit, OnDestroy, AfterViewIni
       next: (response) => {
         console.log('[BorderGenerator] 上傳成功，收到響應:', response);
         if (response.success) {
-          // 使用文件路徑而不是 base64
-          const imagePath = response.filePath;
-          console.log('[BorderGenerator] 圖片路徑:', imagePath);
-          
-          console.log('[BorderGenerator] 調用 borderService.setUploadedImage()');
-          this.borderService.setUploadedImage(imagePath);
-          
-          // 同時顯示預覽（使用服務器 URL）
-          const imageUrl = this.uploadService.getImageUrl(imagePath);
-          console.log('[BorderGenerator] 圖片 URL:', imageUrl);
-          // 暫時使用 URL 顯示預覽，但存儲的是路徑
-          this.uploadedImage = imageUrl;
+          // 優先使用 base64 數據（Vercel 環境或本地環境都支持）
+          if (response.imageDataUrl) {
+            console.log('[BorderGenerator] 使用 base64 數據');
+            this.uploadedImage = response.imageDataUrl;
+            this.borderService.setUploadedImage(response.imageDataUrl);
+          } else if (response.filePath) {
+            // 如果沒有 base64，使用文件路徑
+            console.log('[BorderGenerator] 使用文件路徑:', response.filePath);
+            const imageUrl = this.uploadService.getImageUrl(response.filePath);
+            this.uploadedImage = imageUrl;
+            this.borderService.setUploadedImage(response.filePath);
+          }
           console.log('[BorderGenerator] uploadedImage 已設置為:', this.uploadedImage);
         } else {
           console.warn('[BorderGenerator] 響應中 success 為 false');
@@ -207,11 +207,20 @@ export class BorderGeneratorComponent implements OnInit, OnDestroy, AfterViewIni
   }
 
   getImageUrl(imagePath: string): string {
-    // 如果是路徑，轉換為完整 URL；如果是 base64 或完整 URL，直接返回
+    // 如果是 base64 數據（data: 開頭），直接返回
+    if (imagePath.startsWith('data:')) {
+      return imagePath;
+    }
+    // 如果是完整 URL（http:// 或 https://），直接返回
+    if (imagePath.startsWith('http://') || imagePath.startsWith('https://')) {
+      return imagePath;
+    }
+    // 如果是 /uploads/ 路徑，轉換為完整 URL
     if (imagePath.startsWith('/uploads/') || imagePath.startsWith('uploads/')) {
       return this.uploadService.getImageUrl(imagePath);
     }
-    return imagePath; // base64 或完整 URL
+    // 其他情況直接返回
+    return imagePath;
   }
 
   onDeleteImage(event: Event, imagePath: string): void {
