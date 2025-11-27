@@ -1,45 +1,61 @@
 # 服務器設置說明
 
-## 文件上傳功能
+## 統一服務器架構
 
-本應用現在支持將用戶上傳的圖片保存到服務器的文件系統中。
+本應用現在使用**單一端口統一服務器**，所有功能（前端應用、API、文件上傳）都在同一個端口運行。
 
 ## 安裝依賴
 
-首先安裝新增的依賴：
+首先安裝依賴：
 
 ```bash
 npm install
 ```
 
-新增的依賴包括：
+主要依賴包括：
 - `express` - Web 服務器框架
 - `multer` - 文件上傳中間件
 - `cors` - 跨域支持
-- `concurrently` - 同時運行多個命令
 
 ## 運行方式
 
-### 方式 1：同時運行前端和後端（推薦）
+### 開發模式（推薦）
 
 ```bash
 npm run dev
 ```
 
-這會同時啟動：
-- 後端服務器：`http://localhost:3000`
-- 前端開發服務器：`http://localhost:7575`
+這會：
+1. 先構建 Angular 應用（輸出到 `www` 目錄）
+2. 啟動統一服務器在 `http://localhost:3000`
 
-### 方式 2：分別運行
+**所有功能都在同一個端口：**
+- 前端應用：`http://localhost:3000`
+- API 端點：`http://localhost:3000/api/*`
+- 上傳文件：`http://localhost:3000/uploads/*`
 
-**終端 1 - 啟動後端服務器：**
+### 開發模式（監聽文件變化，自動重新構建）
+
 ```bash
+npm run dev:watch
+```
+
+這會同時運行：
+- Angular 構建監聽器（自動重新構建）
+- 統一服務器
+
+### 生產模式
+
+```bash
+npm run build:prod
 npm run server
 ```
 
-**終端 2 - 啟動前端開發服務器：**
+### 僅運行服務器（需要先構建）
+
 ```bash
-npm start
+npm run build
+npm run server
 ```
 
 ## 文件存儲位置
@@ -55,7 +71,19 @@ public/uploads/
 
 - `POST /api/upload` - 上傳圖片
 - `GET /api/images` - 獲取所有上傳的圖片列表
+- `DELETE /api/images/:filename` - 刪除圖片
 - `GET /uploads/:filename` - 訪問上傳的圖片
+
+## 目錄結構
+
+```
+border-maker/
+├── server.js          # 統一服務器（Express）
+├── public/            # 公共靜態文件
+│   └── uploads/       # 上傳的圖片存儲位置
+├── www/               # Angular 構建輸出（由 server.js 提供服務）
+└── src/               # Angular 源代碼
+```
 
 ## 注意事項
 

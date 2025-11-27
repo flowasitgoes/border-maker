@@ -21,10 +21,10 @@ export async function GET(
 
     // 本地环境：从文件系统读取文件
     const filename = params.path.join('/')
-    const filePath = path.join(process.cwd(), 'src', 'public', 'uploads', filename)
+    const filePath = path.join(process.cwd(), 'public', 'uploads', filename)
     
     // 安全检查：确保路径在 uploads 目录内
-    const uploadsDir = path.join(process.cwd(), 'src', 'public', 'uploads')
+    const uploadsDir = path.join(process.cwd(), 'public', 'uploads')
     const resolvedPath = path.resolve(filePath)
     const resolvedUploadsDir = path.resolve(uploadsDir)
     

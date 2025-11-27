@@ -19,7 +19,7 @@ export async function GET() {
 
     // 本地环境：从文件系统读取图片列表
     console.log('[API] 本地环境：从文件系统读取图片列表')
-    const uploadsDir = path.join(process.cwd(), 'src', 'public', 'uploads')
+    const uploadsDir = path.join(process.cwd(), 'public', 'uploads')
     
     // 检查 uploads 文件夹是否存在
     if (!existsSync(uploadsDir)) {

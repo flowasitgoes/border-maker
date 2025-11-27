@@ -1,46 +1,82 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
+# Dependencies
+node_modules/
+/.pnp
+.pnp.js
 
-# Compiled output
+# Testing
+/coverage
+*.lcov
+.nyc_output
+
+# Next.js
+/.next/
+/out/
+next-env.d.ts
+
+# Production
+/build
 /dist
-/tmp
-/out-tsc
 /www
 
-# Node
-/node_modules
-npm-debug.log
-yarn-error.log
+# Misc
+.DS_Store
+*.pem
+*.log
+*.tsbuildinfo
 
-# IDEs and editors
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Local env files
+.env
+.env*.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Vercel
+.vercel
+.vercel/*
+
+# TypeScript
+*.tsbuildinfo
+
+# IDE
+.vscode/
 .idea/
+*.swp
+*.swo
+*~
 .project
 .classpath
-.c9/
-*.launch
 .settings/
-*.sublime-workspace
 
-# Visual Studio Code
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-.history/*
-
-# Miscellaneous
-/.angular/cache
-.sass-cache/
-/connect.lock
-/coverage
-/libpeerconnection.log
-testem.log
-/typings
-
-# System files
+# OS
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
 
-# Uploaded files (可選：如果不想提交上傳的圖片到 git)
-/public/uploads/*
-!/public/uploads/.gitkeep
+# Angular
+/.angular/
+*.ngfactory.ts
+*.ngsummary.json
+
+# Capacitor
+/android/
+/ios/
+.capacitor/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# 注意：public/ 文件夹不会被忽略，会被提交到 GitHub 和 Vercel
+
