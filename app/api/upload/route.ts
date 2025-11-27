@@ -65,7 +65,7 @@ export async function POST(request: NextRequest) {
       // 本地环境：保存文件到本地文件夹
       console.log('[API] 本地环境：保存文件到本地文件夹')
       
-      const uploadsDir = path.join(process.cwd(), 'public', 'uploads')
+      const uploadsDir = path.join(process.cwd(), 'src', 'public', 'uploads')
       
       // 确保 uploads 文件夹存在
       if (!existsSync(uploadsDir)) {

@@ -14,7 +14,7 @@ app.use(cors());
 app.use(express.json());
 
 // 確保 uploads 文件夾存在
-const uploadsDir = path.join(__dirname, 'public', 'uploads');
+const uploadsDir = path.join(__dirname, 'src', 'public', 'uploads');
 if (!fs.existsSync(uploadsDir)) {
   fs.mkdirSync(uploadsDir, { recursive: true });
 }
@@ -190,7 +190,7 @@ app.get('/api/images', (req, res) => {
 app.use('/uploads', express.static(uploadsDir));
 
 // 提供 public 文件夾的靜態文件服務
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'src', 'public')));
 
 // 啟動服務器
 app.listen(PORT, () => {
