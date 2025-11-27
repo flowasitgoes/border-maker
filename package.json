@@ -17,7 +17,8 @@
     "cap:add": "npx cap add",
     "cap:sync": "npx cap sync",
     "cap:open": "npx cap open",
-    "cap:run": "npx cap run"
+    "cap:run": "npx cap run",
+    "generate:icons": "node scripts/generate-icons.js"
   },
   "dependencies": {
     "@angular/animations": "^18.0.0",
@@ -64,6 +65,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "sharp": "^0.34.5",
     "typescript": "~5.4.0"
   }
 }

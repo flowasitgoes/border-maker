@@ -1,16 +1,28 @@
 {
-  "name": "Border Maker",
-  "short_name": "Border Maker",
-  "description": "Border Generator App",
+  "name": "Border Generator - 图片边框生成器",
+  "short_name": "Border Generator",
+  "description": "为你的图片添加精美的边框和网格效果",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#1e293b",
+  "background_color": "#ffffff",
   "theme_color": "#f97316",
-  "orientation": "portrait",
+  "orientation": "any",
   "icons": [
     {
-      "src": "icon.png",
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
       "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
       "type": "image/png"
     }
   ]
