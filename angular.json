@@ -28,7 +28,7 @@
               {
                 "glob": "**/*",
                 "input": "src/public",
-                "ignore": ["**/uploads/**"]
+                "output": "/"
               },
               "src/manifest.json"
             ],

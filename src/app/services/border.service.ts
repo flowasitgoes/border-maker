@@ -52,21 +52,40 @@ export class BorderService {
     this.uploadService.getImageList().subscribe({
       next: (response) => {
         console.log('[BorderService] 從服務器收到響應:', response);
-        if (response.success && response.images.length > 0) {
-          console.log('[BorderService] 服務器圖片數量:', response.images.length);
-          // 將服務器上的圖片路徑添加到 Gallery
-          const serverImagePaths = response.images.map(img => img.path);
-          console.log('[BorderService] 服務器圖片路徑:', serverImagePaths);
-          const currentGallery = this.galleryImagesSubject.value;
-          console.log('[BorderService] 當前 Gallery:', currentGallery);
+        console.log('[BorderService] 響應詳情:', JSON.stringify(response, null, 2));
+        
+        if (response.success) {
+          console.log('[BorderService] 響應成功，圖片數量:', response.images?.length || 0);
           
-          // 合併服務器圖片和本地存儲的圖片（避免重複）
-          const mergedGallery = [...new Set([...serverImagePaths, ...currentGallery])];
-          console.log('[BorderService] 合併後的 Gallery:', mergedGallery);
-          this.galleryImagesSubject.next(mergedGallery);
-          this.saveToLocalStorage();
+          if (response.images && response.images.length > 0) {
+            console.log('[BorderService] 服務器圖片列表:', response.images);
+            // 將服務器上的圖片路徑添加到 Gallery
+            const serverImagePaths = response.images.map(img => {
+              const path = img.path || img.url || `/uploads/${img.filename}`;
+              console.log('[BorderService] 處理圖片路徑:', { img, path });
+              return path;
+            });
+            console.log('[BorderService] 服務器圖片路徑:', serverImagePaths);
+            const currentGallery = this.galleryImagesSubject.value;
+            console.log('[BorderService] 當前 Gallery:', currentGallery);
+            
+            // 合併服務器圖片和本地存儲的圖片（避免重複）
+            const mergedGallery = [...new Set([...serverImagePaths, ...currentGallery])];
+            console.log('[BorderService] 合併後的 Gallery:', mergedGallery);
+            console.log('[BorderService] 合併後的 Gallery 數量:', mergedGallery.length);
+            this.galleryImagesSubject.next(mergedGallery);
+            this.saveToLocalStorage();
+          } else {
+            console.log('[BorderService] 服務器沒有圖片（空數組）');
+            if (response.debug) {
+              console.log('[BorderService] 調試信息:', response.debug);
+            }
+          }
         } else {
-          console.log('[BorderService] 服務器沒有圖片或響應失敗');
+          console.log('[BorderService] 服務器響應失敗，success 為 false');
+          if (response.error) {
+            console.log('[BorderService] 錯誤信息:', response.error);
+          }
         }
       },
       error: (error) => {
