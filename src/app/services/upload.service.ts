@@ -18,6 +18,17 @@ export interface ImageListResponse {
     path: string;
     url: string;
   }>;
+  debug?: {
+    message?: string;
+    checkedPaths?: string[];
+    cwd?: string;
+    dirname?: string;
+    uploadsDir?: string;
+    totalFiles?: number;
+    imageFiles?: number;
+    stack?: string;
+  };
+  error?: string;
 }
 
 export interface DeleteResponse {
