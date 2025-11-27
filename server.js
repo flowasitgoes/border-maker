@@ -223,15 +223,6 @@ if (fs.existsSync(wwwDir)) {
   app.use(express.static(wwwDir));
 }
 
-// 如果存在 Next.js 構建輸出，也提供服務
-const nextBuildDir = path.join(__dirname, '.next');
-if (fs.existsSync(nextBuildDir)) {
-  const nextStaticDir = path.join(nextBuildDir, 'static');
-  if (fs.existsSync(nextStaticDir)) {
-    app.use('/_next/static', express.static(nextStaticDir));
-  }
-}
-
 // Angular 路由支持：所有非 API 路由都返回 index.html（用於 Angular Router）
 // 注意：這個路由必須放在最後，讓靜態文件優先匹配
 app.get('*', (req, res, next) => {
