@@ -69,7 +69,7 @@ async function generateIcons() {
         <rect width="100%" height="100%" fill="url(#grad)"/>
         <rect x="60" y="60" width="1080" height="510" rx="40" fill="white" opacity="0.95"/>
         <text x="600" y="280" font-family="Arial, sans-serif" font-size="80" font-weight="bold" fill="#1f2937" text-anchor="middle">
-          Border Generator
+          Border Maker
         </text>
         <text x="600" y="360" font-family="Arial, sans-serif" font-size="40" fill="#6b7280" text-anchor="middle">
           为你的图片添加精美的边框

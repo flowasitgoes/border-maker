@@ -1,6 +1,6 @@
 {
-  "name": "Border Generator - 图片边框生成器",
-  "short_name": "Border Generator",
+  "name": "Border Maker - 图片边框生成器",
+  "short_name": "Border Maker",
   "description": "为你的图片添加精美的边框和网格效果",
   "start_url": "/",
   "display": "standalone",
