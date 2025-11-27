@@ -42,19 +42,26 @@ export default function BorderGenerator() {
 
         if (data.success && data.images && data.images.length > 0) {
           console.log('[BorderGenerator] 服务器图片数量:', data.images.length)
+          console.log('[BorderGenerator] 服务器返回的图片数据:', data.images)
           
           // 将服务器上的图片路径添加到 Gallery
-          const serverImagePaths = data.images.map((img: any) => img.path || img.url)
+          // 优先使用 path，如果没有则使用 url
+          const serverImagePaths = data.images.map((img: any) => {
+            const imagePath = img.path || img.url || `/uploads/${img.filename}`
+            console.log('[BorderGenerator] 处理图片路径:', { img, imagePath })
+            return imagePath
+          })
           console.log('[BorderGenerator] 服务器图片路径:', serverImagePaths)
           
           // 合并服务器图片和当前 Gallery（避免重复）
           setGalleryImages((prev) => {
             const merged = [...new Set([...serverImagePaths, ...prev])]
             console.log('[BorderGenerator] 合并后的 Gallery 数量:', merged.length)
+            console.log('[BorderGenerator] 合并后的 Gallery 内容:', merged)
             return merged
           })
         } else {
-          console.log('[BorderGenerator] 服务器没有图片或响应失败')
+          console.log('[BorderGenerator] 服务器没有图片或响应失败，响应数据:', data)
         }
       } catch (error) {
         console.warn('[BorderGenerator] 无法从服务器加载图片列表，错误:', error)
@@ -116,21 +123,73 @@ export default function BorderGenerator() {
       const data = await response.json()
 
       if (data.success) {
-        // 本地环境：优先使用文件路径，Vercel 环境：使用 base64
-        const displayImage = data.filePath || data.imageDataUrl
+        // 优先使用 base64 用于显示（更可靠，不需要网络请求）
+        // 文件路径用于 Gallery（本地环境）
+        const displayImage = data.imageDataUrl || data.filePath
         const galleryImage = data.filePath || data.imageDataUrl // 本地环境用路径，Vercel 用 base64
         
         if (displayImage) {
-          setUploadedImage(displayImage)
-          // 將新上傳的圖片添加到Gallery（避免重複）
-          setGalleryImages((prev) => {
-            if (!prev.includes(galleryImage)) {
-              return [galleryImage, ...prev]
+          // 如果使用 base64，直接设置（不需要验证加载）
+          if (data.imageDataUrl) {
+            console.log('使用 base64 图片数据')
+            setUploadedImage(data.imageDataUrl)
+            // 將新上傳的圖片添加到Gallery（避免重複）
+            setGalleryImages((prev) => {
+              if (!prev.includes(galleryImage)) {
+                return [galleryImage, ...prev]
+              }
+              return prev
+            })
+          } else if (data.filePath) {
+            // 如果只有文件路径，验证图片是否能加载
+            console.log('验证文件路径图片:', data.filePath)
+            const img = new Image()
+            let imageLoaded = false
+            
+            const timeout = setTimeout(() => {
+              if (!imageLoaded) {
+                console.error('图片加载超时，使用备用方案')
+                // 如果加载超时，尝试使用 base64（如果有）
+                if (data.imageDataUrl) {
+                  setUploadedImage(data.imageDataUrl)
+                }
+              }
+            }, 5000) // 5秒超时
+            
+            img.onload = () => {
+              imageLoaded = true
+              clearTimeout(timeout)
+              console.log('文件路径图片加载成功')
+              setUploadedImage(data.filePath)
+              setGalleryImages((prev) => {
+                if (!prev.includes(galleryImage)) {
+                  return [galleryImage, ...prev]
+                }
+                return prev
+              })
             }
-            return prev
-          })
+            
+            img.onerror = (error) => {
+              imageLoaded = true
+              clearTimeout(timeout)
+              console.error('文件路径图片加载失败:', error)
+              // 如果文件路径加载失败，尝试使用 base64（如果有）
+              if (data.imageDataUrl) {
+                setUploadedImage(data.imageDataUrl)
+                setGalleryImages((prev) => {
+                  if (!prev.includes(data.imageDataUrl)) {
+                    return [data.imageDataUrl, ...prev]
+                  }
+                  return prev
+                })
+              }
+            }
+            
+            // 开始加载图片
+            img.src = data.filePath
+          }
 
-          // 如果是本地环境，文件已保存到 public/uploads/
+          // 如果是本地环境，文件已保存到 src/public/uploads/
           if (data.filePath && !data.isVercel) {
             console.log('文件已保存到本地:', data.filePath)
           } else if (data.isVercel) {
@@ -141,18 +200,31 @@ export default function BorderGenerator() {
     } catch (error) {
       console.error('上传图片失败:', error)
       // 如果上传失败，回退到 base64 方式（仅用于渲染，不保存）
-      const reader = new FileReader()
-      reader.onload = (e) => {
-        const imageDataUrl = e.target?.result as string
-        setUploadedImage(imageDataUrl)
-        setGalleryImages((prev) => {
-          if (!prev.includes(imageDataUrl)) {
-            return [imageDataUrl, ...prev]
+      try {
+        const reader = new FileReader()
+        reader.onload = (e) => {
+          try {
+            const imageDataUrl = e.target?.result as string
+            if (imageDataUrl) {
+              setUploadedImage(imageDataUrl)
+              setGalleryImages((prev) => {
+                if (!prev.includes(imageDataUrl)) {
+                  return [imageDataUrl, ...prev]
+                }
+                return prev
+              })
+            }
+          } catch (err) {
+            console.error('设置图片数据时出错:', err)
           }
-          return prev
-        })
+        }
+        reader.onerror = (err) => {
+          console.error('FileReader 读取文件失败:', err)
+        }
+        reader.readAsDataURL(file)
+      } catch (readerError) {
+        console.error('创建 FileReader 失败:', readerError)
       }
-      reader.readAsDataURL(file)
     } finally {
       setIsUploading(false)
     }
@@ -281,6 +353,12 @@ export default function BorderGenerator() {
               src={uploadedImage || "/placeholder.svg"}
               alt="Uploaded"
               className="max-w-full max-h-full object-contain"
+              onError={(e) => {
+                console.error('图片加载失败:', uploadedImage)
+                // 如果图片加载失败，清除 uploadedImage 或使用占位符
+                const target = e.target as HTMLImageElement
+                target.src = "/placeholder.svg"
+              }}
             />
           </div>
 
@@ -310,6 +388,12 @@ export default function BorderGenerator() {
                     src={imageUrl}
                     alt={`Gallery ${index + 1}`}
                     className="w-full h-full object-cover"
+                    onError={(e) => {
+                      console.error('Gallery 图片加载失败:', imageUrl)
+                      // 如果图片加载失败，使用占位符
+                      const target = e.target as HTMLImageElement
+                      target.src = "/placeholder.svg"
+                    }}
                   />
                 </div>
               ))}
