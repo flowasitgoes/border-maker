@@ -3,7 +3,7 @@
 
 const fs = require('fs');
 const path = require('path');
-
+// I like it
 module.exports = async (req, res) => {
   // 设置 CORS 头
   res.setHeader('Access-Control-Allow-Origin', '*');
