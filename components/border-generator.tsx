@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import BorderGridPreview from './border-grid-preview'
 
@@ -24,6 +24,45 @@ export default function BorderGenerator() {
     gridCountY: 5,
     gridSize: 60,
   })
+
+  // 在组件初始化时加载已有图片
+  useEffect(() => {
+    const loadImagesFromServer = async () => {
+      try {
+        console.log('[BorderGenerator] 开始从服务器加载图片列表')
+        const response = await fetch('/api/images')
+        
+        if (!response.ok) {
+          console.warn('[BorderGenerator] 无法从服务器加载图片列表')
+          return
+        }
+
+        const data = await response.json()
+        console.log('[BorderGenerator] 从服务器收到响应:', data)
+
+        if (data.success && data.images && data.images.length > 0) {
+          console.log('[BorderGenerator] 服务器图片数量:', data.images.length)
+          
+          // 将服务器上的图片路径添加到 Gallery
+          const serverImagePaths = data.images.map((img: any) => img.path || img.url)
+          console.log('[BorderGenerator] 服务器图片路径:', serverImagePaths)
+          
+          // 合并服务器图片和当前 Gallery（避免重复）
+          setGalleryImages((prev) => {
+            const merged = [...new Set([...serverImagePaths, ...prev])]
+            console.log('[BorderGenerator] 合并后的 Gallery 数量:', merged.length)
+            return merged
+          })
+        } else {
+          console.log('[BorderGenerator] 服务器没有图片或响应失败')
+        }
+      } catch (error) {
+        console.warn('[BorderGenerator] 无法从服务器加载图片列表，错误:', error)
+      }
+    }
+
+    loadImagesFromServer()
+  }, [])
 
   const handleDragOver = (e: React.DragEvent) => {
     e.preventDefault()
@@ -77,15 +116,16 @@ export default function BorderGenerator() {
       const data = await response.json()
 
       if (data.success) {
-        // 使用返回的 imageDataUrl（base64）用于前端渲染
-        const imageDataUrl = data.imageDataUrl || data.filePath
+        // 本地环境：优先使用文件路径，Vercel 环境：使用 base64
+        const displayImage = data.filePath || data.imageDataUrl
+        const galleryImage = data.filePath || data.imageDataUrl // 本地环境用路径，Vercel 用 base64
         
-        if (imageDataUrl) {
-          setUploadedImage(imageDataUrl)
+        if (displayImage) {
+          setUploadedImage(displayImage)
           // 將新上傳的圖片添加到Gallery（避免重複）
           setGalleryImages((prev) => {
-            if (!prev.includes(imageDataUrl)) {
-              return [imageDataUrl, ...prev]
+            if (!prev.includes(galleryImage)) {
+              return [galleryImage, ...prev]
             }
             return prev
           })
